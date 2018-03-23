@@ -44,8 +44,11 @@ public class Main {
     public static int BMethod(boolean first, boolean second, boolean third) {
         int OptionOne = 1;
         int OptionTwo = 2;
-        return (first || (!second && !third)) ? OptionOne : OptionTwo;
-        //return (first || !(second && third)) ? OptionOne : OptionTwo;
+
+        //return (first && !(second && !third)) ?  OptionTwo : OptionOne;
+
+        return !(first && (!second || !third)) ?  OptionOne : OptionTwo;
+
     }
 
 }
